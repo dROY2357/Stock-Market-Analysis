@@ -1,0 +1,73 @@
+body {
+  flex-direction: row;
+  background-color: rgb(209, 209, 209);
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 3vh;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#chartDetails {
+  display: flex;
+  background-color: "red";
+  display: flex;
+  max-width: 60%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1%;
+}
+
+#chart {
+  width: 100%;
+  height: auto;
+}
+
+#chartDisplay {
+  height: 35vh;
+  width: 80%;
+  margin: auto;
+}
+
+#buttonsCont {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#buttonsCont button {
+  margin: 10px 15px;
+}
+
+#summary {
+  font-size: 0.85em;
+}
+
+#stockList {
+  display: flex;
+  display: flex;
+  float: right;
+  width: 20%;
+  height: auto;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.list-btn {
+  width: 100px;
+}
