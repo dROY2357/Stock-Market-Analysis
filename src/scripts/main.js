@@ -1,7 +1,9 @@
-import { renderChart } from "./chart.js";
+import { renderChart } from "./chart.js"; //importing renderChart function from external module
 
 let stock = "AAPL";
 let dur = "1mo";
+
+//Function to render the summary of the currently selected stock. AAPL stock by default.
 
 async function renderSummary(stock) {
   try {
@@ -15,6 +17,8 @@ async function renderSummary(stock) {
     console.log(error);
   }
 }
+
+//Function to get details of a specified stock
 
 async function getDetails(stock) {
   let bookVal;
@@ -31,6 +35,8 @@ async function getDetails(stock) {
   }
   return { bookVal, profit };
 }
+
+//Function to render details of a specified stock
 
 async function renderDetails(stock) {
   const resultFetched = await getDetails(stock);
@@ -52,11 +58,15 @@ async function renderDetails(stock) {
   }
 }
 
+//Function to render all the content on the site from fetched data
+
 function renderAllContent(stock = "AAPL", dur = "1mo") {
   renderSummary(stock);
   renderDetails(stock);
   renderChart(stock, dur);
 }
+
+//Adding click event listener to the buttons specifying stock ranges for user to select
 
 const m1Btn = document.querySelector("#m1Btn");
 m1Btn.addEventListener("click", () => {
@@ -78,6 +88,8 @@ y5Btn.addEventListener("click", () => {
   renderAllContent(stock, "5y");
   dur = "5y";
 });
+
+//Function to render all the stocks under stock list with buttons to select that specific stock
 
 async function renderStockList() {
   const list = [
@@ -118,6 +130,8 @@ async function renderStockList() {
     listElem.appendChild(listItemElem);
   }
 }
+
+//First render call
 
 renderStockList();
 renderAllContent();

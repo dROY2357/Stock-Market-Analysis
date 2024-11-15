@@ -38,6 +38,11 @@ header {
   margin: auto;
 }
 
+#min-max-data {
+  text-align: center;
+  margin: 10px;
+}
+
 #buttonsCont {
   display: flex;
   justify-content: center;
