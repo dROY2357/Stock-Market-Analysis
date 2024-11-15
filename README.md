@@ -6,3 +6,4 @@ Fetches data from 3 APIs:
 3. Stock data: https://stocksapi-uhe1.onrender.com/api/stocks/getstockstatsdata
 
 Displays data on the app and allows user to select time ranges and various stocks via buttons.
+Plots chart based on fetched API data using Plotly.js.
